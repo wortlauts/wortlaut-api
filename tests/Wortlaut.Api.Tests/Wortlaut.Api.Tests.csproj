@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Testcontainers.Elasticsearch" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Wortlaut.Api\Wortlaut.Api.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\contracts\index-template.json" Link="contracts\index-template.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

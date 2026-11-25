@@ -1,0 +1,19 @@
+# .NET build output
+bin/
+obj/
+*.user
+TestResults/
+
+# Local overrides and secrets: never commit these
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.*.local.json
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.vs/
